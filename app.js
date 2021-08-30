@@ -5,7 +5,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const db = "mongodb://127.0.0.1/wordgame";
+const db = process.env.DB_STRING || "mongodb://127.0.0.1/wordgame";
 const rateLimit = require("express-rate-limit");
 var cors = require("cors");
 
